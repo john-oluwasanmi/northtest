@@ -480,3 +480,16 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+/Nhs.Test.Api/bin/Debug/net10.0/Nhs.Test.Api.exe
+/Nhs.Test.Api/bin/Debug/net10.0/Nhs.Test.Api.dll
+/Nhs.Test.Api/bin/Debug/net10.0/Nhs.Test.Api.pdb
+/Nhs.Test.Api/obj/Debug/net10.0/ref/Nhs.Test.Api.dll
+/Nhs.Test.Api/obj/Debug/net10.0/refint/Nhs.Test.Api.dll
+/Nhs.Test.Api/obj/Debug/net10.0/apphost.exe
+/Nhs.Test.Api/obj/Debug/net10.0/Nhs.Test.Api.AssemblyInfo.cs
+/Nhs.Test.Api/obj/Debug/net10.0/Nhs.Test.Api.AssemblyInfoInputs.cache
+/Nhs.Test.Api/obj/Debug/net10.0/Nhs.Test.Api.csproj.CoreCompileInputs.cache
+/Nhs.Test.Api/obj/Debug/net10.0/Nhs.Test.Api.dll
+/Nhs.Test.Api/obj/Debug/net10.0/Nhs.Test.Api.pdb
+/Nhs.Test.Api/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json
+/Nhs.Test.Api/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
