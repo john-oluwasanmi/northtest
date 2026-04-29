@@ -16,6 +16,11 @@ namespace Nhs.Test.Api.BusinessService
 
         public async Task SetAsync(Patient patient)
         {
+            if(patient is null)
+            {
+                return;
+            }
+
             string cacheKey = $"{nameof(Patient)}_{patient.Id}";
 
             var cacheOptions = new MemoryCacheEntryOptions()

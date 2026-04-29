@@ -61,7 +61,7 @@ namespace Nhs.Test.Api.Filters
             var username = credentials[0];
             var password = credentials[1];
 
-            if (username != "username" || password != "password")
+            if (username != Constants.Username || password != Constants.Password)
             {
                 return Task.FromResult(AuthenticateResult.Fail(
                     "Invalid username or password")
