@@ -1,0 +1,6 @@
+@Nhs.Test.Api_HostAddress = http://localhost:5252
+
+GET {{Nhs.Test.Api_HostAddress}}/Patient/1
+Accept: application/json
+
+###
