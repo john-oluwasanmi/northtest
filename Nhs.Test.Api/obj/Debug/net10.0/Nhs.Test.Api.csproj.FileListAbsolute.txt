@@ -45,3 +45,4 @@ C:\Projects\nhs\Nhs.Test.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Abstracti
 C:\Projects\nhs\Nhs.Test.Api\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Projects\nhs\Nhs.Test.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
 C:\Projects\nhs\Nhs.Test.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Projects\nhs\Nhs.Test.Api\obj\Debug\net10.0\Nhs.Test.Api.sourcelink.json

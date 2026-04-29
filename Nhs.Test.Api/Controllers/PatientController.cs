@@ -9,6 +9,7 @@ namespace Nhs.Test.Api.Controllers
 
     [ApiController]
     [Route("api/[controller]")]
+    [BasicAuthorization]
     public class PatientController(IPatientService patientService, ILogger<PatientController> logger, AppDbContext appDbContext) : ControllerBase
     {
 

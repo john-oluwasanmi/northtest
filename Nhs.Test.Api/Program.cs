@@ -1,4 +1,5 @@
 
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -7,8 +8,8 @@ using Microsoft.OpenApi;
 using Nhs.Test.Api.BusinessService;
 using Nhs.Test.Api.Filters;
 using Nhs.Test.Api.Mapping;
-using Nhs.Test.Api.Model;
 using Nhs.Test.Api.Mapping;
+using Nhs.Test.Api.Model;
 namespace Nhs.Test.Api
 {
     public class Program
@@ -31,6 +32,18 @@ namespace Nhs.Test.Api
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy(BasicAuthenticationHandler._schemeName, policy =>
+                {
+                    policy.AddAuthenticationSchemes(BasicAuthenticationHandler._schemeName);
+                    policy.RequireAuthenticatedUser();
+                });
+            });
+
+            builder.Services.AddAuthentication()
+                            .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>(BasicAuthenticationHandler._schemeName, null);
+
             builder.Services.AddAutoMapper(cfg =>
             {
                 cfg.AddProfile<AMappingProfile>();
@@ -48,7 +61,9 @@ namespace Nhs.Test.Api
 
             app.UseHttpsRedirection();
 
-            // app.UseAuthorization();
+            app.UseAuthorization();
+
+
 
 
             app.MapControllers();
