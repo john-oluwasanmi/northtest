@@ -11,7 +11,7 @@ namespace Nhs.Test.Api.Filters
 {
     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {
-        public const string _schemeName = "BasicAuthentication";
+        
 
         public BasicAuthenticationHandler(
             IOptionsMonitor<AuthenticationSchemeOptions> options,
@@ -68,12 +68,12 @@ namespace Nhs.Test.Api.Filters
                 );
             }
 
-            var identity = new ClaimsIdentity([new Claim(ClaimTypes.Name, username), new Claim(ClaimTypes.AuthenticationMethod, authenticationHeader.Scheme)], _schemeName);
+            var identity = new ClaimsIdentity([new Claim(ClaimTypes.Name, username), new Claim(ClaimTypes.AuthenticationMethod, authenticationHeader.Scheme)], Constants.SchemeName);
 
             return Task.FromResult(AuthenticateResult.Success(
                 new AuthenticationTicket(
                     new ClaimsPrincipal(identity),
-                    _schemeName
+                    Constants.SchemeName
                 )));
         }
     }

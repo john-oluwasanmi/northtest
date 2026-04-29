@@ -7,7 +7,7 @@ namespace Nhs.Test.Api
     {
         public BasicAuthorizationAttribute()
         {
-            AuthenticationSchemes = BasicAuthenticationHandler._schemeName;
+            AuthenticationSchemes = Constants.SchemeName;
         }
     }
 }

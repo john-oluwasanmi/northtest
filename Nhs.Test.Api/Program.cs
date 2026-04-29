@@ -34,15 +34,15 @@ namespace Nhs.Test.Api
 
             builder.Services.AddAuthorization(options =>
             {
-                options.AddPolicy(BasicAuthenticationHandler._schemeName, policy =>
+                options.AddPolicy(Constants.SchemeName, policy =>
                 {
-                    policy.AddAuthenticationSchemes(BasicAuthenticationHandler._schemeName);
+                    policy.AddAuthenticationSchemes(Constants.SchemeName);
                     policy.RequireAuthenticatedUser();
                 });
             });
 
             builder.Services.AddAuthentication()
-                            .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>(BasicAuthenticationHandler._schemeName, null);
+                            .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>(Constants.SchemeName, null);
 
             builder.Services.AddAutoMapper(cfg =>
             {
